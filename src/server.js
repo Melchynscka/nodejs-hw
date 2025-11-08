@@ -2,6 +2,7 @@ import express from 'express';
 import cors from 'cors';
 import helmet from "helmet";
 import 'dotenv/config';
+import { errors } from "celebrate";
 
 import { connectMongoDB } from './db/connectMongoDB.js';
 import { logger } from './middleware/logger.js';
@@ -22,6 +23,8 @@ app.use(router);
 
 
 app.use(notFoundHandler);
+
+app.use(errors());
 
 app.use(errorHandler);
 
