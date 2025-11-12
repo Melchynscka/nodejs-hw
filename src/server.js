@@ -13,7 +13,7 @@ import notesRouter from "./routes/notesRoutes.js";
 import authRouter from "./routes/authRoutes.js";
 
 const app = express();
-const PORT = process.env.PORT ?? 3000;;
+const PORT = process.env.PORT ?? 3000;
 
 app.use(logger);
 app.use(express.json());
